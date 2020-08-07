@@ -1,17 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {MyTextInput} from "./components/MyTextInput";
-import {MyTextShow} from "./components/MyTextShow";
+import PageContainer from "./container/PageContainer";
 
 
 function App() {
-  return (
-      <div>
-          <MyTextInput/>
-          <MyTextShow/>
-      </div>
-  );
+    return (
+        <PageContainer/>
+    );
 }
 
 export default App;

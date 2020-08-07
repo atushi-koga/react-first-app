@@ -1,13 +1,15 @@
-import { reducerWithInitialState } from 'typescript-fsa-reducers'
+import {reducerWithInitialState} from 'typescript-fsa-reducers'
+import {TextInputActions} from "./actions";
 
 export interface State {
-//ここにstoreが持つstateを書く
-
+    inputValue: string
 }
 
 export const initialState: State = {
-//ここにstateの初期値を書く
-
+    inputValue: '',
 }
 
 export const Reducer = reducerWithInitialState(initialState)
+    .case(TextInputActions.updateTextInputValue, (state, inputValue) => (
+        {...state, inputValue}
+    ))
